@@ -1,0 +1,36 @@
+drop table if exists food;
+
+create table food(
+	seq int(20),
+	product_cls_code int(20),
+	product_cls_name varchar(50),
+	category_code int(20),
+	category_name varchar(50),
+	productno int(20) PRIMARY key,
+	lastest_day varchar(50),
+	product_name varchar(50),
+	item_name varchar(50),
+	unit varchar(50),
+	day1 varchar(50),
+	dpr1 varchar(50),
+	day2 varchar(50),
+	dpr2 varchar(50),
+	day3 varchar(50),
+	dpr3 varchar(50),
+	day4 varchar(50),
+	dpr4 varchar(50),
+	direction int(20),
+	price varchar(50)
+	)engine=innodb default charset=utf8;
+	
+	
+show tables;
+
+drop table if exists user;
+
+create table user(
+user_id varchar(50) primary key,
+user_name varchar(50),
+passwd varchar(50),
+addr varchar(100)
+)engine=innodb default charset=utf8;
