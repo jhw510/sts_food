@@ -4,7 +4,7 @@
 <jsp:include page="Header.jsp"/>
 	<body>
 	 <section class="parallax section"
-		style="background-image: register.png; width: 100%; height: 100%;">
+		style="background-image: url(register.png); width: 100%; height: 100%;">
 	 <div id="contents">
             <div class="user_content">
 

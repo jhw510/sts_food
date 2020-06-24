@@ -5,7 +5,7 @@
 <body>
 	
 	<section class="parallax section"
-		style="background-image: url(http://static.ssgcdn.com/cmpt/edit/201803/14/182018031418464820347862039786_342.png); width: 100%; height: 100%;">
+		style="background-image: url(http://static.ssgcdn.com/cmpt/edit/201803/14/182018031418464820347862039786_342.png);background-size:1550px 750px; width: 100%; height: 100%;">
 		<div class="wrapsection">
 			<div class="parallax-overlay"></div>
 			<div class="container">
