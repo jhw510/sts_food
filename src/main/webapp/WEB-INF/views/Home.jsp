@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <html>
-<jsp:include page="Header.jsp"/>
+<jsp:include page="common/Header.jsp"/>
 <body>
 	
 	<section class="parallax section"
@@ -20,11 +21,11 @@
 								role="navigation">
 								<ul class="nav navbar-nav">
 									<li>
-										<h3>
+										
 											<h3>
 												<input id="home_btn" type="button" value="홈으로" />
 											</h3>
-										</h3>
+										
 									</li>
 									<li>
 										<h3>
@@ -58,13 +59,14 @@
 
 	</section>
 
-<jsp:include page="Footer.jsp"/>
+<jsp:include page="common/Footer.jsp"/>
 
 <script>
-$('#join_btn').click(function(){
+$('#join_btn').click(function(e){
+	e.preventDefault()
 	console.log('이동화면 진입')
-	alert("<%=application.getContextPath()%>");
-	location.href= "<%=application.getContextPath()%>/user/join/form"   
+	alert("${context}");
+	location.href= "${context}/user/join/from"   
 })
 
 </script>

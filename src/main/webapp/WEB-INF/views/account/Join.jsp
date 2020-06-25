@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html>
-<jsp:include page="Header.jsp"/>
+<jsp:include page="../common/Header.jsp"/>
 	<body>
 	 <section class="parallax section"
-		style="background-image: url(register.png); width: 100%; height: 100%;">
+		style="background-image: url(); width: 100%; height: 100%;">
 	 <div id="contents">
             <div class="user_content">
 
@@ -52,7 +52,7 @@
             </div>
         </div>
         	</section>
-<jsp:include page="Footer.jsp"/>
+<jsp:include page="../common/Footer.jsp"/>
 	
 	<script>
 	$('#cancel_btu').click(function(){
