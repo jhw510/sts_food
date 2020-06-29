@@ -2,3 +2,7 @@
     pageEncoding="UTF-8"%>
 </body>
 </html>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>

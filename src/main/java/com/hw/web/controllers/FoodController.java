@@ -20,8 +20,8 @@ import com.hw.web.services.FoodService;
 public class FoodController {
 	private static final Logger logger = LoggerFactory.getLogger(FoodController.class);
 	
-	
-	
+	//
+	//@Autowired
 //	FoodService foodService;
 //	
 //	FoodDTO foodDTO;

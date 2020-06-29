@@ -12,16 +12,11 @@
 <div id="wrapper">
 <tiles:insertAttribute name="navigator"/>
 <section>
-	<article>
-		<jsp:include page="../main/Jumbotron.jsp"/>
-	</article>
-	<article>
-		<tiles:insertAttribute name="content"/>
+<article>
+		<tiles:insertAttribute name="noTemplate"/>
 	</article>
 </section>
-<footer>
-	<tiles:insertAttribute name="footer"/>
-</footer>
+
 </div>	
 </body>
 </html>

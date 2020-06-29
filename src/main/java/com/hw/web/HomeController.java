@@ -22,5 +22,10 @@ public class HomeController {
 	
 		return "main/Home.tiles";
 	}
+	@GetMapping("/user/home/join")
+	public String userJoin() {
+		logger.info("회원가입 진입");
+		return "user/joinForm.jsp";
+	}
 	
 }

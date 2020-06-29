@@ -2,13 +2,13 @@
 	pageEncoding="UTF-8"%>
 	
 <html>
-<jsp:include page="common/Header.jsp"/>
+<jsp:include page="../common/Header.jsp"/>
 <body>
 	
 	<section class="parallax section"
 		style="background-image: url(http://static.ssgcdn.com/cmpt/edit/201803/14/182018031418464820347862039786_342.png);background-size:1550px 750px; width: 100%; height: 100%;">
 		<div class="wrapsection">
-			<div class="parallax-overlay"></div>
+		
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 sol-sm-12">
@@ -56,10 +56,31 @@
 			</div>
 		</div>
 	
+<div class="container-fluid bg-3 text-center">    
+  <h3>Some of my Work</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
 
 	</section>
 
-<jsp:include page="common/Footer.jsp"/>
+
 
 <script>
 $('#join_btn').click(function(e){
