@@ -11,14 +11,14 @@
   <fieldset>
     <legend>Legend</legend>
     <div class="form-group row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
       <div class="col-sm-10">
-        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        <input type="text"  class="form-control-plaintext" id="staticEmail" value="아이디를 입력해주세요">
       </div>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <label for="exampleInputEmail1">Address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="주소를 입력해주세요">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
