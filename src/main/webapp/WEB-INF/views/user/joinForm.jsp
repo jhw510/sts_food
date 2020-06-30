@@ -13,12 +13,12 @@
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
       <div class="col-sm-10">
-        <input type="text"  class="form-control-plaintext" id="userid" placeholder="아이디를 입력해주세요">
+        <input type="text"  class="form-control-plaintext" id="userid" >
       </div>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Address</label>
-      <input type="email" class="form-control" id="addr" aria-describedby="emailHelp" placeholder="주소를 입력해주세요">
+      <input  class="form-control" id="addr" aria-describedby="emailHelp" placeholder="주소를 입력해주세요">
       
     </div>
     <div class="form-group">
@@ -104,6 +104,8 @@
 document.getElementById('signup_btn').addEventListener('click',function(e){
 	e.preventDefault()
 	person.init()
+	alert(document.getElementById('userid').value)
+	alert(document.getElementById('password').value)
 	person.join({"userid": document.getElementById('userid').value,
         		"password": document.getElementById('password').value})
 })

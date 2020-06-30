@@ -7,11 +7,12 @@ import org.springframework.stereotype.Component;
 public class UserDTO {
 	
 	private String userid,userName,password,addr;
-	public String getUserId() {
+	
+	public String getUserid() {
 		return userid;
 	}
 
-	public void setUserId(String userid) {
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
 
@@ -23,11 +24,11 @@ public class UserDTO {
 		this.userName = userName;
 	}
 
-	public String getPasswd() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPasswd(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
