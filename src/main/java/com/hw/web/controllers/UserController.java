@@ -20,14 +20,15 @@ import com.hw.web.services.UserService;
 public class UserController {
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	@Autowired UserService userService;
-	@PostMapping("/{userid}")
-	public String joinForm() {
-		logger.info("---------조인화면진입-------");
-		return "Join";
-	}
+	@Autowired UserDTO user;
+	/*
+	 * @PostMapping("/{userid}") public String joinForm(@RequestBody) {
+	 * logger.info("---------조인화면진입-------"); return "Join"; }
+	 */
 	
 	@PostMapping("/join/form")
-	public Messenger login(@RequestBody UserDTO user) {
+	public Messenger join(@RequestBody UserDTO user) {
+		System.out.println("아아");
 		System.out.println("넘어온 회원정보" + user.toString());
 		return Messenger.SUCCESS;
 	}

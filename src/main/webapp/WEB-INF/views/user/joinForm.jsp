@@ -13,7 +13,7 @@
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
       <div class="col-sm-10">
-        <input type="text"  class="form-control-plaintext" id="userId" value="아이디를 입력해주세요">
+        <input type="text"  class="form-control-plaintext" id="userid" value="아이디를 입력해주세요">
       </div>
     </div>
     <div class="form-group">
@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="passw" placeholder="Password">
+      <input type="password" class="form-control" id="password" placeholder="Password">
     </div>
     <div class="form-group">
       <label for="exampleSelect1">Example select</label>

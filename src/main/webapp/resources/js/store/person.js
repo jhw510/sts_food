@@ -1,26 +1,25 @@
 var person = person || {}
 person = (function(){
-	let _, session, javascript
+let _
 	let init = function(){
-		 _ = sessionStorage.getItem('context'),
-		 javascript = sessionStorage.getItem('javascript'),
-		 session = sessionStorage.getItem('session')
+		 _ = sessionStorage.getItem('context')
 	}
-	let join = function(){
+	let join = function(payload){
 		$.ajax({
 			url : _+`/user/join/form`,
 			type: 'POST',
-			data: $("#JoinForm").serialize(),
+			data: JSON.stringify(payload),
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				location.href=_+`/location/user/LoginForm`
+				location.href = _+`/location/user/LoginForm`
 			},
 			error: function(err){
 				alert(err)
 			}
 		})
 	}
+	
 	let login = function(paylode){}
 	let logout = function(){
 		sessionStroage.removeItem('userid')

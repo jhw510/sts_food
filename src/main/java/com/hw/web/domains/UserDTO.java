@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserDTO {
 	
-	private String userId,userName,passwd,addr;
+	private String userid,userName,password,addr;
 	public String getUserId() {
-		return userId;
+		return userid;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUserId(String userid) {
+		this.userid = userid;
 	}
 
 	public String getUserName() {
@@ -24,11 +24,11 @@ public class UserDTO {
 	}
 
 	public String getPasswd() {
-		return passwd;
+		return password;
 	}
 
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setPasswd(String password) {
+		this.password = password;
 	}
 
 	public String getAddr() {
@@ -37,6 +37,12 @@ public class UserDTO {
 
 	public void setAddr(String addr) {
 		this.addr = addr;
+	}
+
+	@Override
+	public String toString() {
+		return "UserDTO [userid=" + userid + ", userName=" + userName + ", password=" + password + ", addr=" + addr
+				+ "]";
 	}
 	
 
