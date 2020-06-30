@@ -83,13 +83,13 @@
 
 
 <script>
-app.init("${ctx}")
+app.init("${context}")
 
-$('#join_btn').click(function(e){
+/* $('#join_btn').click(function(e){
 	e.preventDefault()
 	console.log('이동화면 진입')
 	alert("${ctx}");
 	location.href= "${ctx}/user/join/form"   
 })
-
+ */
 </script>

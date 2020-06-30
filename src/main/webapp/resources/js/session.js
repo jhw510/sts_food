@@ -1,7 +1,7 @@
 "use strict";
 function Session(x){
-	sessionStorage.setItem('ctx', x)
-	sessionStorage.setItem('js', x+'/resources/js')
+	sessionStorage.setItem('context', x)
+	sessionStorage.setItem('javascript', x+'/resources/javascript')
 	sessionStorage.setItem('css', x+'/resources/css')
-	sessionStorage.setItem('img', x+'/resources/img')
+	sessionStorage.setItem('imge', x+'/resources/imge')
 }

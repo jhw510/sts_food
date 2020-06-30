@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
  * Handles requests for the application home page.
  */
 @Controller
-@SessionAttributes({" ","css","js","img"})
+@SessionAttributes({"context","css","javascript","imge"})
 public class HomeController {
 	@Autowired HttpSession session;
 	@Autowired HttpServletRequest request;
@@ -37,8 +37,7 @@ public class HomeController {
 //		return "user/joinForm.jsp";
 //	}
 	@GetMapping("/location/{dir}/{page}")
-	public String move(@PathVariable("dir") String dir,
-			@PathVariable("page") String page) {
+	public String move(@PathVariable("dir") String dir,@PathVariable("page") String page) {
 		return String.format("%s/%s.jsp",dir,page);
 	}
 	
