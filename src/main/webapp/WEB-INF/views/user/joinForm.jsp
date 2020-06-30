@@ -13,7 +13,7 @@
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
       <div class="col-sm-10">
-        <input type="text"  class="form-control-plaintext" id="userid" value="아이디를 입력해주세요">
+        <input type="text"  class="form-control-plaintext" id="userid" placeholder="아이디를 입력해주세요">
       </div>
     </div>
     <div class="form-group">

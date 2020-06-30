@@ -20,7 +20,21 @@ let _
 		})
 	}
 	
-	let login = function(paylode){}
+	let login = function(payload){
+		$.ajax({
+			url : _+`/person/users/${payload.userid}`,
+			type: 'POST',
+			data: JSON.stringify(payload),
+			dataType: 'json',
+			contentType: 'application/json; charset=UTF-8',
+			success: function(res){
+				alert(res)
+			},
+			error: function(err){
+				alert(err)
+			}
+		})
+	}
 	let logout = function(){
 		sessionStroage.removeItem('userid')
 		sessionStroage.removeItem('ctx')
