@@ -7,7 +7,7 @@ import com.hw.web.mappers.UserMapper;
 
 @Service
 public class UserServiceImpl implements UserService{
-	//@Autowired UserMapper userMapper;
+	@Autowired UserMapper userMapper;
 	
 	
 }
