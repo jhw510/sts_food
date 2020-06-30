@@ -21,17 +21,17 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-         <li><a id="a_join"><span class="glyphicon glyphicon-log-in"></span> Join</a></li>
+        <li><a id="logout"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+         <li><a id="a_remove"><span class="glyphicon glyphicon-log-in"></span> 회원탈퇴</a></li>
       </ul>
     </div>
   </div>
 </nav>
 </div>
+<script></script>
 <script>
-$('#a_join').click(function(e) {
+document.getE.click(function(e) {
 	e.preventDefault()
-	alert(`${ctx}/user/home/join`)
-	location.href = `${ctx}/user/home/join`
+	user.logout()
 })
 </script>

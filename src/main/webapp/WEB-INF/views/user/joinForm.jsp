@@ -13,17 +13,17 @@
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
       <div class="col-sm-10">
-        <input type="text"  class="form-control-plaintext" id="staticEmail" value="아이디를 입력해주세요">
+        <input type="text"  class="form-control-plaintext" id="userId" value="아이디를 입력해주세요">
       </div>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="주소를 입력해주세요">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <input type="email" class="form-control" id="addr" aria-describedby="emailHelp" placeholder="주소를 입력해주세요">
+      
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control" id="passw" placeholder="Password">
     </div>
     <div class="form-group">
       <label for="exampleSelect1">Example select</label>
@@ -95,10 +95,19 @@
       <label for="customRange1">Example range</label>
       <input type="range" class="custom-range" id="customRange1">
     </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button id="signup_btn" class="btn btn-primary">Sign UP</button>
   </fieldset>
 </form>
 </body>
+<script src="${js}/person.js"></script>
 <script>
+document.getElementById('signup_btn').addEventListener('click',function(e){
+	e.preventDefault()
+	person.init()
+	person.join({"userid": document.getElementById('userid').value,
+        		"password": document.getElementById('password').value})
+})
+
+
 </script>
 </html>
