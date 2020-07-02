@@ -12,7 +12,11 @@ let _
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				location.href = _+`/location/user/LoginForm`
+				if(res === 'SUCCESS'){
+					location.href = _+`/location/user/LoginForm`
+				}else{
+					location.href = _+`/location/user/JoinForm`
+				}
 			},
 			error: function(err){
 				alert(err)
@@ -22,13 +26,14 @@ let _
 	
 	let login = function(payload){
 		$.ajax({
-			url : _+`/person/users/${payload.userid}`,
+			url : _+`/user/login/form/${payload.userid}`,
 			type: 'POST',
 			data: JSON.stringify(payload),
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
 				alert(res)
+			
 			},
 			error: function(err){
 				alert(err)

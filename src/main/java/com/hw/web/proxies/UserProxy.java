@@ -6,13 +6,19 @@ import java.util.function.BiFunction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.hw.web.domains.UserDTO;
+import com.hw.web.enums.Sql;
 import com.hw.web.mappers.TxMapper;
+import com.hw.web.mappers.UserMapper;
 
 @Component("manager")
 public class UserProxy extends Proxy {
 	@Autowired
 	TxMapper txMapper;
+	@Autowired UserMapper userMapper;
+	@Autowired Box<String> box;
 
 	public String makeBirthday() {
 		String birthday = "";
@@ -73,6 +79,21 @@ public class UserProxy extends Proxy {
 		Collections.shuffle(name);
 		String fullname = fname.get(0) + name.get(0) + name.get(1);
 		return fullname;
+	}
+//	public UserDTO makeUser() {
+//		return new UserDTO(makeUserid(),makeUsername(),"1",
+//				makeBirthday(),makeGender(),makeTelephone(),"2020","");
+//	}
+	@Transactional
+//	public void insertUsers(int count) {
+//		for(int i=0; i<count;i++) {
+//			txMapper.insertUser(makeUser());
+//		}
+//	}
+	public void truncateUser() {
+		box.clear();
+		box.put("TRUNCATE_USERS", Sql.TRUNCATE_USERS.toString());
+		userMapper.truncateUser(box.get());
 	}
 
 }

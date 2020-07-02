@@ -1,7 +1,10 @@
 package com.hw.web.enums;
+
+import com.hw.web.domains.UserDTO;
+
 public enum Sql {
 	CREATE_DB, 
-	CREATE_PERSONS, DROP_PERSONS, TRUNCATE_PERSONS,
+	CREATE_USERS, DROP_USERS, TRUNCATE_USERS,
 	CREATE_ARTICLES, DROP_ARTICLES, TRUNCATE_ARTICLES,
 	CREATE_IMAGES, DROP_IMAGES, TRUNCATE_IMAGES;
 	@Override
@@ -11,20 +14,20 @@ public enum Sql {
 		case CREATE_DB:
 			result = "create database mariadb";
 			break;
-		case CREATE_PERSONS:
-			result = "create table persons(userid varchar(30)primary key,"+ 
+		case CREATE_USERS:
+			result = "create table users(userid varchar(30)primary key,"+ 
                     " password varchar(30) ," +
                     " name varchar(30) ," +
                     " birthday varchar(30) ," +
                     " gender varchar(10) ," +
                     " telephone varchar(30))ENGINE=InnoDB DEFAULT CHARSET=UTF8" ;
 			break;
-		case DROP_PERSONS:
-			result = "drop table persons";
+		case DROP_USERS:
+			result = "drop table users";
 			break;
 		
-		case TRUNCATE_PERSONS:
-			result = "truncate table persons";
+		case TRUNCATE_USERS:
+			result = "truncate table users";
 			break;
 		case TRUNCATE_ARTICLES :
 			result = "truncate table articles";
@@ -61,4 +64,5 @@ public enum Sql {
 		}
 		return result;
 	}
+	
 }
