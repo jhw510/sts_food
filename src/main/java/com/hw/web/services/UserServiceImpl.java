@@ -1,6 +1,7 @@
 package com.hw.web.services;
 
 import java.util.Date;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,7 +41,8 @@ public class UserServiceImpl implements UserService{
 		
 	}
 	@Override
-	public void findAll() {
+	public List<UserDTO> findAll() {
+		return userMapper.selectAll();
 		// TODO Auto-generated method stub
 		
 	}

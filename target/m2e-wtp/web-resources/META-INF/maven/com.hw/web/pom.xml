@@ -8,7 +8,7 @@
 	<name>legacy</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
-	<properties>
+		<properties>
 		<java-version>1.8</java-version>
 		<spring-version>4.3.0.RELEASE</spring-version>
 		<aspectj-version>1.6.10</aspectj-version>
@@ -21,7 +21,7 @@
 		<commons-el-version>1.0</commons-el-version>
 		<commons-fileupload-version>1.3.3</commons-fileupload-version>
 		<commons-io-version>2.6</commons-io-version>
-		<jackson-version>2.9.0</jackson-version>
+		<jackson-version>2.9.3</jackson-version>
 		<jaxb-impl-version>2.1</jaxb-impl-version>
 		<jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
 		<json-lib-version>2.4</json-lib-version>
@@ -29,6 +29,16 @@
 		<jsoup-version>1.11.2</jsoup-version>
 		<dbcp-version>1.4</dbcp-version>
 		<spring-jdbc-version>2.0.6</spring-jdbc-version>
+		
+		<mockito-version>1.10.19</mockito-version>
+		<easymock-version>2.4</easymock-version>
+		<easymockclassextension-version>3.2</easymockclassextension-version> 
+		<dbunit-version>2.4.3</dbunit-version>
+		<unitils-version>2.2</unitils-version>
+		
+		<hamcrest-version>1.3</hamcrest-version>
+		<mariadb-version>2.6.1</mariadb-version>
+		<servlet-version>3.1.0</servlet-version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -54,7 +64,6 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${aspectj-version}</version>
 		</dependency>
-
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -97,21 +106,19 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-
 		<!-- Servlet -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
+		 <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-version}</version>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -164,11 +171,6 @@
 			<version>${jaxb-impl-version}</version>
 		</dependency>
 		<dependency>
-    <groupId>org.codehaus.jackson</groupId>
-    <artifactId>jackson-mapper-asl</artifactId>
-    <version>1.9.13</version>
-</dependency>
-		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson-version}</version>
@@ -209,19 +211,69 @@
 			<artifactId>jsoup</artifactId>
 			<version>${jsoup-version}</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>${jackson-mapper-asl-version}</version>
+		</dependency>
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-			 </dependency>
-			 <dependency>
+			<exclusions>
+		      <exclusion>
+		         <groupId>org.hamcrest</groupId>
+		         <artifactId>hamcrest-core</artifactId>
+		      </exclusion>
+		   </exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>${hamcrest-version}</version>
+		</dependency>      
+		<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring-version}</version>
         </dependency>
+       <!-- 스프링mock객체 -->
+        <dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>${mockito-version}</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- 전자정부용 mock객체 -->
+		<dependency>
+    <groupId>org.easymock</groupId>
+    <artifactId>easymock</artifactId>
+    <version>${easymock-version}</version>
+    <scope>test</scope>
+		</dependency>
 		
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymockclassextension</artifactId>
+            <version>${easymock-version}</version>
+            <scope>test</scope>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${dbunit-version}</version>
+            <scope>test</scope>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.unitils</groupId>
+            <artifactId>unitils</artifactId>
+            <version>${unitils-version}</version>
+            <scope>test</scope>
+        </dependency>
 		<!-- Root -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -262,9 +314,8 @@
 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
-		    <version>2.6.1</version>
-		</dependency>
-
+		    <version>${mariadb-version}</version>
+		</dependency>                                                                                                                                                                                                                                                                                                                                    
 	</dependencies>
 
 	<build>

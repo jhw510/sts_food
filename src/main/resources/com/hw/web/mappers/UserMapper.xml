@@ -15,7 +15,10 @@ ${CREATE_DB}
    parameterType="com.hw.web.domains.UserDTO">
 
 </select>
-   
+    <select id="selectAll"
+  	resultType="com.hw.web.domains.UserDTO">
+  	select * from users
+  </select>
    
 
 </mapper>

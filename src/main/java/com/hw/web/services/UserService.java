@@ -1,6 +1,7 @@
 package com.hw.web.services;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ public interface UserService {
 	public void save();
 	 public void update();
 	 public void findOne();
-	 public void findAll();	
+	 public List<UserDTO> findAll();	
 	 public void count();
 	 public void delete();
 	 public UserDTO findByUseridAndPassword(UserDTO user);

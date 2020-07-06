@@ -18,6 +18,11 @@ public interface UserMapper {
 	public void dropUser(HashMap<String, String> paramMap);
 	public void truncateUser(HashMap<String, String> paramMap);
 	public UserDTO selectByUseridAndPassword(UserDTO user);
+	public List<UserDTO> selectAll();
+	/**
+	 * @return
+	 */
+	
 
 		
 	

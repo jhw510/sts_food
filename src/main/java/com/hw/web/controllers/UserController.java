@@ -3,12 +3,17 @@ package com.hw.web.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
@@ -31,7 +36,7 @@ public class UserController {
 	 */
 	
 	@PostMapping("/join/form")
-	public Messenger join(@RequestBody UserDTO user) {
+	public @ResponseBody Messenger join(@RequestBody UserDTO user) {
 
 		System.out.println("넘어온 회원정보" + user.toString());
 		return Messenger.SUCCESS;
@@ -42,6 +47,10 @@ public class UserController {
 		UserDTO returnUserDTO =userService.findByUseridAndPassword(user);
 		session.setAttribute("session", returnUserDTO);
 		return returnUserDTO;
+	}
+	@GetMapping("/userlist")
+	public void list(Model model){
+		model.addAttribute("users",userService.findAll());
 	}
 	
 
